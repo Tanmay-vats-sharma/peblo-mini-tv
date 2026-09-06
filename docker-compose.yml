@@ -6,7 +6,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
-      - "5433:5432"
+      - "5434:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
@@ -20,7 +20,7 @@ services:
       context: ./backend
     environment:
       DATABASE_URL: postgresql+psycopg://postgres:postgres@db:5432/video_cms
-      SECRET_KEY: change-this-development-secret
+      JWT_SECRET_KEY: change-this-development-secret
     ports:
       - "8001:8000"
     volumes:
@@ -37,7 +37,7 @@ services:
     build:
       context: ./frontend
     ports:
-      - "5174:80"
+      - "3000:80"
     depends_on:
       - backend
 
