@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-09-06T14:51:15.807320+00:00",
+  "version": 6,
+  "sections": [
+    {
+      "section": "featured",
+      "shows": [
+        {
+          "id": 18,
+          "title": "Demo Show",
+          "slug": "demo-show",
+          "description": "A demonstration show for testing the public viewer",
+          "section": "featured",
+          "categories": [
+            "family",
+            "adventure",
+            "kids"
+          ],
+          "release_year": 2026,
+          "artworks": {
+            "poster": "/storage/artworks/dec9c36364dd4104853218b93433b2a8.jpg",
+            "banner": "/storage/artworks/689348ec93474068a01d50c48ab301a9.jpg",
+            "thumbnail": "/storage/artworks/411744c293544366a87f11d52fd9310c.jpg"
+          },
+          "seasons": [
+            {
+              "season_number": 1,
+              "title": "Season 1",
+              "description": "This is season 1.",
+              "episodes": [
+                {
+                  "content_group": "demo-show-s1-e1",
+                  "title": "Episode 1",
+                  "episode_number": 1,
+                  "description": "This is ep 1",
+                  "duration_seconds": 120,
+                  "video_url": "https://example.com/demo-video.mp4",
+                  "languages": [
+                    "en"
+                  ]
+                },
+                {
+                  "content_group": "demo-show-s01e02",
+                  "title": "A Second Demo Story",
+                  "episode_number": 2,
+                  "description": "A second valid episode for the end-to-end demonstration.",
+                  "duration_seconds": 180,
+                  "video_url": "https://example.com/demo-video-2.mp4",
+                  "languages": [
+                    "en"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "title": "Moti's Many Lives",
+          "slug": "motis-many-lives",
+          "description": "Moti the dog is reborn across India, making new friends in every state.",
+          "section": "featured",
+          "categories": [
+            "adventure",
+            "india",
+            "friendship"
+          ],
+          "release_year": null,
+          "artworks": {
+            "poster": "/storage/artworks/0ea36e9b4ef942d6853f66ac2fe8e664.jpg",
+            "banner": "/storage/artworks/19a3941ec37843e885b759bb3110bedd.jpg",
+            "thumbnail": "/storage/artworks/b93d8f61509b4f9193057cefb68ba6f4.jpg"
+          },
+          "seasons": [
+            {
+              "season_number": 1,
+              "title": "Season 1",
+              "description": "Moti the dog is reborn across India, making new friends in every state.",
+              "episodes": [
+                {
+                  "content_group": "motis-many-lives-demo-s01e01",
+                  "title": "The Lost Kite",
+                  "episode_number": 1,
+                  "description": "Moti follows a bright kite across a new neighborhood.",
+                  "duration_seconds": 300,
+                  "video_url": "https://example.com/moti-lost-kite.mp4",
+                  "languages": [
+                    "en"
+                  ]
+                },
+                {
+                  "content_group": "motis-many-lives-demo-s01e02",
+                  "title": "Rain on the Roof",
+                  "episode_number": 2,
+                  "description": "A rainy afternoon turns into an unexpected adventure.",
+                  "duration_seconds": 360,
+                  "video_url": "https://example.com/moti-rain-roof.mp4",
+                  "languages": [
+                    "en"
+                  ]
+                }
+              ]
+            },
+            {
+              "season_number": 2,
+              "title": "Season 2",
+              "description": "Temporary season for API testing.",
+              "episodes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "series",
+      "shows": []
+    },
+    {
+      "section": "minisodes",
+      "shows": []
+    },
+    {
+      "section": "songs",
+      "shows": []
+    }
+  ]
+}

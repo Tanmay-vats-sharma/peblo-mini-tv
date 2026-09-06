@@ -11,8 +11,8 @@ export function CmsLayout() {
         <nav aria-label="CMS navigation">
           <NavLink end to="/admin">Dashboard</NavLink>
           <NavLink to="/admin/shows">Shows</NavLink>
-          <span aria-disabled="true" className="nav-disabled">Validation (Phase C)</span>
-          {user?.role === 'admin' ? <span aria-disabled="true" className="nav-disabled">Publish history (Phase C)</span> : null}
+          <NavLink to="/admin/validation">Validation</NavLink>
+          <NavLink to="/admin/publish-history">Publish history</NavLink>
         </nav>
         <div className="sidebar-footer"><span>{user?.email}</span><button className="link-button" type="button" onClick={logout}>Sign out</button></div>
       </aside>

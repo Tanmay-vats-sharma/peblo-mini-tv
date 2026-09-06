@@ -90,6 +90,49 @@ export interface UploadedArtwork {
   file_size_bytes: number
 }
 
+export interface ValidationIssue {
+  code: string
+  message: string
+  entity_type: string
+  entity_id: number | null
+  field: string | null
+  details: Record<string, unknown>
+}
+
+export interface ValidationReport {
+  valid: boolean
+  error_count: number
+  warning_count: number
+  errors: ValidationIssue[]
+  warnings: ValidationIssue[]
+}
+
+export interface PublishHistoryItem {
+  id: number
+  triggered_by: number | null
+  status: 'pending' | 'succeeded' | 'failed' | 'blocked'
+  catalogue_path: string | null
+  show_count: number
+  episode_count: number
+  error_count: number
+  message: string | null
+  started_at: string
+  completed_at: string | null
+}
+
+export interface PublishResult {
+  valid: boolean
+  status: 'succeeded' | 'failed' | 'blocked'
+  message: string
+  catalogue_path: string | null
+  version: number | null
+  show_count: number
+  episode_count: number
+  error_count: number
+  errors: ValidationIssue[]
+  warnings: ValidationIssue[]
+}
+
 interface ArtworkUploadResponse {
   success: boolean
   message: string
@@ -172,6 +215,21 @@ export async function updateEpisode(episodeId: number, payload: EpisodePayload):
 
 export async function deleteEpisode(episodeId: number): Promise<void> {
   await api.delete(`/admin/episodes/${episodeId}`)
+}
+
+export async function getValidationReport(): Promise<ValidationReport> {
+  const response = await api.get<ValidationReport>('/admin/validation-report')
+  return response.data
+}
+
+export async function getPublishHistory(): Promise<PublishHistoryItem[]> {
+  const response = await api.get<PublishHistoryItem[]>('/admin/catalog/publish-history')
+  return response.data
+}
+
+export async function publishCatalogue(): Promise<PublishResult> {
+  const response = await api.post<PublishResult>('/admin/catalog/publish')
+  return response.data
 }
 
 export async function uploadArtwork(
