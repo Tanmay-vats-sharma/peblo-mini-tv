@@ -6,17 +6,17 @@ A small video-content CMS and Netflix-style public viewer built with FastAPI, Po
 
 - Shows, seasons, episodes, and artwork management
 - Admin, Editor, and Viewer roles
-- JWT authentication
+- JWT authentication with Argon2 password hashing
 - PostgreSQL database with Alembic migrations
 - Seed data with intentionally invalid records
 - Catalogue validation before publishing
 - Atomic `catalogue.json` replacement
 - Publish history
 - Search, filtering, and pagination
-- Responsive public viewer
+- Responsive Netflix-style public viewer
 - Artwork upload and validation
 - Docker Compose configuration
-- Backend and frontend tests/checks
+- Backend tests and frontend checks
 
 ## Tech Stack
 
@@ -35,7 +35,7 @@ A small video-content CMS and Netflix-style public viewer built with FastAPI, Po
 peblo-tv-mini/
 ├── backend/
 │   ├── app/
-│   ├── migrations/
+│   ├── alembic/
 │   ├── tests/
 │   ├── seed_shows.json
 │   ├── reference.json
